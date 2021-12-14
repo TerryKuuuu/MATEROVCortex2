@@ -33,6 +33,8 @@ void SetRightClaw(int Voltage){
   motorSet(RightClaw, Voltage);
 }
 
+// Micro ROV Thruster was control by EDCP
+//
 // void SetMicroROVThruster(int Voltage){
 //   motorSet(MicroROVThruster, Voltage);
 // }
@@ -60,19 +62,6 @@ void SetMovementControl(){
   if (LeftJoystickY > -difference && LeftJoystickY < difference) {
     LeftJoystickY = 0;
   }
-
-  // if (RightJoystickY > -MaxVoltage && RightJoystickY < MaxVoltage) {
-  //   RightJoystickY = MaxVoltage;
-  // }
-  // if (LeftJoystickX > -MaxVoltage && LeftJoystickX < MaxVoltage) {
-  //   LeftJoystickX = MaxVoltage;
-  // }
-  // if (LeftJoystickY > -MaxVoltage && LeftJoystickY < MaxVoltage) {
-  //   LeftJoystickY = MaxVoltage;
-  // }
-  //
-  // SetUpperThruster(RightJoystickY);
-  // SetHorizontalThruster(-(LeftJoystickY + LeftJoystickX), -(LeftJoystickY - LeftJoystickX));
 
   int left = -(LeftJoystickY + LeftJoystickX);
   int right = -(LeftJoystickY - LeftJoystickX);
