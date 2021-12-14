@@ -1,5 +1,6 @@
 #include "main.h"
 #include "SubsystemHeaders/Globe.h"
+
 //Ports
 int MiddleClaw = 9;
 int RightClaw = 6;
@@ -44,7 +45,6 @@ void SetMicroROVCollector(int Voltage){
 }
 
 //Control
-
 void SetMovementControl(){
 
   int RightJoystickY = joystickGetAnalog(1, 2);
